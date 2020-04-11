@@ -2,7 +2,7 @@
 
 from django import template
 from django.conf import settings
-from django.contrib.staticfiles.templatetags.staticfiles import static
+from django.templatetags.static import static
 
 from ..defaults import TZ_DETECT_SCRIPTS, TZ_DETECT_PERIOD
 from ..utils import convert_header_name

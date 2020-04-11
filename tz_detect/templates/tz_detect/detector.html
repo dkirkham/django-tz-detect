@@ -1,5 +1,8 @@
 {% load static %}
 {% if show %}
+{% for script in scripts %}
+  {{ script|safe }}
+{% endfor %}
 <script type="text/javascript"{% for key, value in script_attrs.items %} {{ key }}="{{ value }}"{% endfor %}>
   var csrf_token = "{{ csrf_token }}";
   var tz_set_endpoint = '{% url "tz_detect__set" %}';
